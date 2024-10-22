@@ -1,0 +1,21 @@
+Sequential (matrix-matrix):
+gcc -O3 -march=native matrix-matrix-mul-seq.c -o matrix-matrix-mul-seq.exe -fopenmp
+./matrix-matrix-mul-seq.exe 
+
+Parallel (matrix-matrix):
+gcc -fopenmp -O3 -march=native matrix-matrix-mul-parallel.c -o matrix-matrix-mul-parallel.exe
+./matrix-matrix-mul-parallel.exe
+
+
+Sequential (matrix-vector):
+gcc -O3 -march=native matrix-vector-seq.c -o matrix-vector-seq.exe -fopenmp
+./matrix-vector-seq.exe 
+
+Parallel (matrix-vector):
+gcc -O3 -march=native matrix-vector-parallel.c -o matrix-vector-parallel.exe -fopenmp
+./matrix-vector-parallel.exe 
+
+
+Note: 
+	-O3 ==> for high level optimizations
+	-march=native ==> for the machine specific optimizations

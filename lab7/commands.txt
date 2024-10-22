@@ -1,0 +1,18 @@
+mpicc basicprogram.c -o basicprogram
+mpirun -np 4 ./basicprogram
+
+
+//here -np shows number of processes 
+//mpicc ==> to compile the program using mpicc compiler
+//mpirun ==> to run the program
+
+
+mpirun -np 2 send_receive
+mpicc send_receive.c -o send_receive
+
+MPI_Send & MPI_Receive ==> blocking communications ==> they stop until the data is sent or received
+
+MPI_Isend & MPI_Irecv ==> non-blocking communications ==> they return immediately and then receive or send the data asynchronously
+
+
+
